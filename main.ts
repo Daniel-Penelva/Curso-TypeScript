@@ -1,44 +1,20 @@
 
-// Funções
+// Union
+// Determina os tipos do id. Vale ressalatar que não se limitar apenas dois tipos
+//É possível inserir mais de dois tipos - ex: let id: number | string | boolean | string[]
+let id: number | string 
+id = 12345
+id = '12345'
 
-function oi(): void{
-    console.log('oi')
-}
+// Type Alias - exemplificando, trabalhando com vários ids
+type Id = string | number
 
-function nome(): string{
-    return 'Daniel'
-}
+let id1: Id
+let id2: Id
+let id3: Id
+let id4: Id
 
-function soma(): number{
-    
-    let soma, num1, num2: number
-    num1 = 10, num2 = 20
+// Exemplo 2
+type Usuario = {nome:string; idade:number}
 
-    soma = num1 + num2
-    return soma
-}
-
-function nomeCompleto(nome: string, sobrenome:string):string{
-    nome = 'Daniel'
-    sobrenome = 'Penelva'
-    return 'Seu nome completo é:' + nome + ' ' + sobrenome
-}
-
-// O TypeScript consegue deduzir que a função é do tipo number, já que seus parâmetros recebem um tipo number
-function subtracao(num1:number, num2:number){
-    num1 = 10
-    num2 = 5
-
-    let subtracao = num1 - num2
-    return subtracao
-}
-
-// Função com seta (arrow function)
-const multiplicacao = (num1:number, num2:number): number => num1 + num2
-
-const divisao = (num1:number, num2:number) =>{
-    
-    num1 = 10, num2 = 5
-    let divisao = num1/num2
-    num1 + num2
-} 
+let user: Usuario
