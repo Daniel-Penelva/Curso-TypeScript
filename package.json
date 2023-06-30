@@ -1,0 +1,14 @@
+{
+  "name": "curso-typescript",
+  "version": "1.0.2",
+  "description": "criando package.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Penelva",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
+}
