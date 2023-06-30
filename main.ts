@@ -1,11 +1,21 @@
-let nome, sobrenome: string
-let idade: number
-let masculino: boolean
 
+// Arrays
+let nomes: string[]
+let numeros: number[]
+let ativos: boolean[]
 
-nome = 'Daniel'
-sobrenome = "Penelva"
+let listaCarros: Array<string>
 
-idade = 34
+nomes = ['Daniel', 'Vanessa', 'Carla', 'Ricardo']
+numeros = [1, 2, 3, 4, 5]
+ativos = [true, false]
 
-masculino = true
+listaCarros = ['Ferrari', 'Mercedes', 'Porsche', 'Mustang'] 
+
+// Tuplas
+let alunos: [string, number, boolean]
+alunos = ['Daniel', 34, true]
+
+// Não é recomendado usar o tipo any
+let diversos: any[]
+diversos = ['Caio', 25, true, 'TypeScript', false, 100, 101, 'Maça', 'Ferrari']
