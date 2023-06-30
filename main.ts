@@ -1,21 +1,10 @@
 
-// Arrays
-let nomes: string[]
-let numeros: number[]
-let ativos: boolean[]
+// Objetos
+let nome: object
+nome ={nome: 'Daniel', sobrenome: 'Penelva', idade: 34, altura: 1.75 }
 
-let listaCarros: Array<string>
+let objeto: Record<string, string>
+objeto ={nome: 'Daniel', sobrenome: 'Penelva', idade: '34', altura: '1.75' }
 
-nomes = ['Daniel', 'Vanessa', 'Carla', 'Ricardo']
-numeros = [1, 2, 3, 4, 5]
-ativos = [true, false]
-
-listaCarros = ['Ferrari', 'Mercedes', 'Porsche', 'Mustang'] 
-
-// Tuplas
-let alunos: [string, number, boolean]
-alunos = ['Daniel', 34, true]
-
-// Não é recomendado usar o tipo any
-let diversos: any[]
-diversos = ['Caio', 25, true, 'TypeScript', false, 100, 101, 'Maça', 'Ferrari']
+let objeto1: {nome: string, idade: number, ativo: true}
+objeto1 ={nome: 'Daniel', idade: 34, ativo: true}
