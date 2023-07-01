@@ -1,53 +1,21 @@
 
-// Interfaces
-
-interface Pesoa{
+// Campo opcional (?)
+// Por exemplo, toda pessoa tem um carro?
+interface Pessoa{
     nome: String
     idade: number
+    carro?: string
 }
 
-let user:Pesoa
-
-// Estendendo interface e interface
-
-interface Aluno extends Pesoa{
-    curso: string
-    periodo:number
+type Aluno = Pessoa &{
+   curso:string
+   periodo:number
 }
 
 let aluno: Aluno
 
-// Estendendo type e interface
-type Carro = {
-    chassi: number
-}
+// O carro por ser um campo opcional não é preciso inseri-lo na variavel aluno
+aluno = {nome:'Daniel', idade: 34, curso:'Ciencia da Computação', periodo: 3}
 
-interface Ferrari extends Carro{
-    modelo: string
-    ano: number
-}
-
-interface Porsche extends Carro{
-    modelo: string
-    ano: number
-}
-
-let ferrari: Ferrari
-let porsche: Porsche
-
-// estendendo type para type
-
-type Fruta = {
-    id: number
-}
-
-type Citrica = Fruta & {
-    nome:String
-}
-
-type Acida = Fruta &{
-    nome:String
-}
-
-let sitrica: Citrica 
-let acida: Acida
+// Pode deixar o campo carro com o valor undefined
+// aluno = {nome:'Daniel', idade: 34, curso:'Ciencia da Computação', periodo: 3, carro: undefined}
