@@ -1,21 +1,28 @@
 
-// Campo opcional (?)
-// Por exemplo, toda pessoa tem um carro?
-interface Pessoa{
+// Generics <T>
+//Pode estipular um valor padrão que no caso é Aluno
+type Pessoa<T = Aluno> = {
     nome: String
     idade: number
     carro?: string
+    profissao: T
 }
 
-type Aluno = Pessoa &{
-   curso:string
-   periodo:number
+type Aluno = {
+   matricula:string
 }
 
-let aluno: Aluno
+interface Engenheiro {
+    crea:string
+}
 
-// O carro por ser um campo opcional não é preciso inseri-lo na variavel aluno
-aluno = {nome:'Daniel', idade: 34, curso:'Ciencia da Computação', periodo: 3}
+interface Medico {
+    crm: string
+}
 
-// Pode deixar o campo carro com o valor undefined
-// aluno = {nome:'Daniel', idade: 34, curso:'Ciencia da Computação', periodo: 3, carro: undefined}
+let medico: Pessoa<Medico>
+let engenheiro: Pessoa<Engenheiro>
+
+// Como é um valor padrão não precisa especificar o tipo como aluno, uma vez que já é aluno
+let aluno: Pessoa
+
