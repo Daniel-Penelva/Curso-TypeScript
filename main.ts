@@ -1,20 +1,53 @@
 
-// Union
-// Determina os tipos do id. Vale ressalatar que não se limitar apenas dois tipos
-//É possível inserir mais de dois tipos - ex: let id: number | string | boolean | string[]
-let id: number | string 
-id = 12345
-id = '12345'
+// Interfaces
 
-// Type Alias - exemplificando, trabalhando com vários ids
-type Id = string | number
+interface Pesoa{
+    nome: String
+    idade: number
+}
 
-let id1: Id
-let id2: Id
-let id3: Id
-let id4: Id
+let user:Pesoa
 
-// Exemplo 2
-type Usuario = {nome:string; idade:number}
+// Estendendo interface e interface
 
-let user: Usuario
+interface Aluno extends Pesoa{
+    curso: string
+    periodo:number
+}
+
+let aluno: Aluno
+
+// Estendendo type e interface
+type Carro = {
+    chassi: number
+}
+
+interface Ferrari extends Carro{
+    modelo: string
+    ano: number
+}
+
+interface Porsche extends Carro{
+    modelo: string
+    ano: number
+}
+
+let ferrari: Ferrari
+let porsche: Porsche
+
+// estendendo type para type
+
+type Fruta = {
+    id: number
+}
+
+type Citrica = Fruta & {
+    nome:String
+}
+
+type Acida = Fruta &{
+    nome:String
+}
+
+let sitrica: Citrica 
+let acida: Acida
